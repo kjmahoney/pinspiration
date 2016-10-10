@@ -1,5 +1,6 @@
-class CommentController < ApplicationController
+class PinsController < ApplicationController
   def index
+    @pins = Pin.all
   end
 
   def edit
