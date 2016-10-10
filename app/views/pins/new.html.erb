@@ -1,2 +1,17 @@
-<h1>Pin#new</h1>
-<p>Find me in app/views/pin/new.html.erb</p>
+<h1>New Pin</h1>
+
+<%= form_for @pin do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :image %><br>
+    <%= f.text_field :img_url %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
