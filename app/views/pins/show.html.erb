@@ -1,2 +1,3 @@
-<h1>Pin#show</h1>
-<p>Find me in app/views/pin/show.html.erb</p>
+<h1>Show</h1>
+
+<h3><%= @pin.title %> <%=@pin.img_url%> <%= link_to "(edit)", edit_pin_path(@pin) %></h3>

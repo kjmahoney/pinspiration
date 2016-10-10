@@ -4,6 +4,14 @@ class PinsController < ApplicationController
   end
 
   def edit
+    @pin = Pin.find(params[:id])
+  end
+
+# update
+  def update
+    @pin = Pin.find(params[:id])
+    @pin.update(pin_params)
+    redirect_to pins_path(@pin)
   end
 
   def new
@@ -18,6 +26,18 @@ class PinsController < ApplicationController
 
     redirect_to pins_path
   end
+
+  def show
+    @pin = Pin.find(params[:id])
+  end
+
+  def destroy
+  @pin = Pin.find(params[:id])
+  @pin.destroy
+
+  redirect_to pins_path
+end
+
 
   private
     def  pin_params

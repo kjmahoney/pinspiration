@@ -1,2 +1,9 @@
-<h1>All Pins</h1>
-<%=@pins %>
+<h2>pins <%= link_to "(+)", new_pin_path %></h2>
+
+<ul>
+  <% @pins.each do |pin| %>
+    <li>
+      <%= link_to "#{pin.title}", pin %>
+    </li>
+  <% end %>
+</ul>
